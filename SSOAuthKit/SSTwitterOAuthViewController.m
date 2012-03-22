@@ -219,7 +219,7 @@
 	NSLog(@"url: %@", url);
 	
 	// Allow the user to change users
-	if ([[url host] isEqualToString:@"api.twitter.com"] && [[url path] isEqualToString:@"/logout"]) {
+	if ([[url host] isEqualToString:@"api.twitter.com"] && [[url path] isEqualToString:@"/intent/session"]) {
 		return YES;
 	}
 	
