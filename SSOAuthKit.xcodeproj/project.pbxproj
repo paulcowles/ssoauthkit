@@ -566,7 +566,7 @@
 					"\"$(SRCROOT)/SSOAuthKit/Vendor/SSToolkit\"",
 				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SSOAuthKit/Vendor/yajl-objc/Project-IPhone/Libraries/GHUnit\"",
@@ -595,7 +595,7 @@
 					"\"$(SRCROOT)/SSOAuthKit/Vendor/SSToolkit\"",
 				);
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/SSOAuthKit/Vendor/yajl-objc/Project-IPhone/Libraries/GHUnit\"",

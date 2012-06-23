@@ -816,7 +816,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LD_OPENMP_FLAGS = "-fopenmp -lxml2";
 				PRODUCT_NAME = SSToolkit;
 				SDKROOT = iphoneos;
@@ -854,7 +854,7 @@
 				GCC_WARN_UNUSED_VALUE = YES;
 				HEADER_SEARCH_PATHS = /usr/include/libxml2;
 				INSTALL_PATH = /usr/local/lib;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				LD_OPENMP_FLAGS = "-fopenmp -lxml2";
 				PRODUCT_NAME = SSToolkit;
 				SDKROOT = iphoneos;
