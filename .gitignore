@@ -7,7 +7,5 @@
 *.mode2v3
 *.perspectivev3
 *.xcuserstate
-SSOAuthKit.xcodeproj/xcuserdata/
-SSOAuthKit/Vendor/SSToolkit/SSToolkit.xcodeproj/xcuserdata/
-
-
+SSOAuthKit.xcodeproj/xcuserdata
+SSOAuthKit/Vendor/SSToolkit/SSToolkit.xcodeproj/xcuserdata
