@@ -574,6 +574,7 @@
 				PRODUCT_NAME = SSOAuthKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -603,6 +604,7 @@
 				PRODUCT_NAME = SSOAuthKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
