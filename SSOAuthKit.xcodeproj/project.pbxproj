@@ -572,9 +572,7 @@
 					"\"$(SRCROOT)/SSOAuthKit/Vendor/yajl-objc/Project-IPhone/Libraries/GHUnit\"",
 				);
 				PRODUCT_NAME = SSOAuthKit;
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = armv7;
 			};
 			name = Debug;
 		};
@@ -582,7 +580,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_UNIVERSAL_IPHONE_OS)";
 				DSTROOT = /tmp/SSOAuthKit.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -602,9 +599,7 @@
 					"\"$(SRCROOT)/SSOAuthKit/Vendor/yajl-objc/Project-IPhone/Libraries/GHUnit\"",
 				);
 				PRODUCT_NAME = SSOAuthKit;
-				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				VALID_ARCHS = armv7;
 			};
 			name = Release;
 		};
