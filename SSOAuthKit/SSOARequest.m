@@ -9,7 +9,7 @@
 #import "SSOARequest.h"
 #import "SSOAToken.h"
 #import "SSOAuthKitConfiguration.h"
-#import "OAHMAC_SHA1SignatureProvider.h"
+#import "SCAVENGEROAHMAC_SHA1SignatureProvider.h"
 #import "NSURL+OAuthString.h"
 #import <SSToolkit/NSString+SSToolkitAdditions.h>
 
@@ -55,7 +55,7 @@
 	}
 	
 	// Signature provider
-	id<OASignatureProviding> signatureProvider = [[OAHMAC_SHA1SignatureProvider alloc] init];
+	id<OASignatureProviding> signatureProvider = [[SCAVENGEROAHMAC_SHA1SignatureProvider alloc] init];
 	
 	// Timestamp
 	NSString *timestamp = [NSString stringWithFormat:@"%d", time(NULL)];
