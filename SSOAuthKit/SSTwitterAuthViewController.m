@@ -134,18 +134,18 @@ static NSString *kSSTwitterAuthViewControllerErrorDomain = @"com.samsoffes.sstwi
 #pragma mark -
 #pragma mark ASIHTTPRequestDelegate
 
-- (void)requestStarted:(ASIHTTPRequest *)aRequest {
+- (void)requestStarted:(SCAVENGERASIHTTPRequest *)aRequest {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:YES];
 }
 
 
-- (void)requestFailed:(ASIHTTPRequest *)aRequest {
+- (void)requestFailed:(SCAVENGERASIHTTPRequest *)aRequest {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	[self failWithError:[aRequest error]];
 }
 
 
-- (void)requestFinished:(ASIHTTPRequest *)aRequest {
+- (void)requestFinished:(SCAVENGERASIHTTPRequest *)aRequest {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
 	if ([aRequest responseStatusCode] >= 500) {

@@ -6,11 +6,11 @@
 //  Copyright 2009 All-Seeing Interactive. All rights reserved.
 //
 
-#import "ASIAuthenticationDialog.h"
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIAuthenticationDialog.h"
+#import "SCAVENGERASIHTTPRequest.h"
 #import <QuartzCore/QuartzCore.h>
 
-static ASIAuthenticationDialog *sharedDialog = nil;
+static SCAVENGERASIAuthenticationDialog *sharedDialog = nil;
 BOOL isDismissing = NO;
 static NSMutableArray *requestsNeedingAuthentication = nil;
 
@@ -32,7 +32,7 @@ static const NSUInteger kDomainSection = 1;
 @end
 
 
-@interface ASIAuthenticationDialog ()
+@interface SCAVENGERASIAuthenticationDialog ()
 - (void)showTitle;
 - (void)show;
 - (NSArray *)requestsRequiringTheseCredentials;
@@ -44,18 +44,18 @@ static const NSUInteger kDomainSection = 1;
 @property (retain) UITableView *tableView;
 @end
 
-@implementation ASIAuthenticationDialog
+@implementation SCAVENGERASIAuthenticationDialog
 
 #pragma mark init / dealloc
 
 + (void)initialize
 {
-	if (self == [ASIAuthenticationDialog class]) {
+	if (self == [SCAVENGERASIAuthenticationDialog class]) {
 		requestsNeedingAuthentication = [[NSMutableArray array] retain];
 	}
 }
 
-+ (void)presentAuthenticationDialogForRequest:(ASIHTTPRequest *)theRequest
++ (void)presentAuthenticationDialogForRequest:(SCAVENGERASIHTTPRequest *)theRequest
 {
 	// No need for a lock here, this will always be called on the main thread
 	if (!sharedDialog) {
@@ -316,7 +316,7 @@ static const NSUInteger kDomainSection = 1;
 
 - (void)cancelAuthenticationFromDialog:(id)sender
 {
-	for (ASIHTTPRequest *theRequest in [self requestsRequiringTheseCredentials]) {
+	for (SCAVENGERASIHTTPRequest *theRequest in [self requestsRequiringTheseCredentials]) {
 		[theRequest cancelAuthentication];
 		[requestsNeedingAuthentication removeObject:theRequest];
 	}
@@ -327,7 +327,7 @@ static const NSUInteger kDomainSection = 1;
 {
 	NSMutableArray *requestsRequiringTheseCredentials = [NSMutableArray array];
 	NSURL *requestURL = [[self request] url];
-	for (ASIHTTPRequest *otherRequest in requestsNeedingAuthentication) {
+	for (SCAVENGERASIHTTPRequest *otherRequest in requestsNeedingAuthentication) {
 		NSURL *theURL = [otherRequest url];
 		if (([otherRequest authenticationNeeded] == [[self request] authenticationNeeded]) && [[theURL host] isEqualToString:[requestURL host]] && ([theURL port] == [requestURL port] || ([requestURL port] && [[theURL port] isEqualToNumber:[requestURL port]])) && [[theURL scheme] isEqualToString:[requestURL scheme]] && ((![otherRequest authenticationRealm] && ![[self request] authenticationRealm]) || ([otherRequest authenticationRealm] && [[self request] authenticationRealm] && [[[self request] authenticationRealm] isEqualToString:[otherRequest authenticationRealm]]))) {
 			[requestsRequiringTheseCredentials addObject:otherRequest];
@@ -340,7 +340,7 @@ static const NSUInteger kDomainSection = 1;
 - (void)presentNextDialog
 {
 	if ([requestsNeedingAuthentication count]) {
-		ASIHTTPRequest *nextRequest = [requestsNeedingAuthentication objectAtIndex:0];
+		SCAVENGERASIHTTPRequest *nextRequest = [requestsNeedingAuthentication objectAtIndex:0];
 		[requestsNeedingAuthentication removeObjectAtIndex:0];
 		[[self class] presentAuthenticationDialogForRequest:nextRequest];
 	}
@@ -349,7 +349,7 @@ static const NSUInteger kDomainSection = 1;
 
 - (void)loginWithCredentialsFromDialog:(id)sender
 {
-	for (ASIHTTPRequest *theRequest in [self requestsRequiringTheseCredentials]) {
+	for (SCAVENGERASIHTTPRequest *theRequest in [self requestsRequiringTheseCredentials]) {
 
 		NSString *username = [[self usernameField] text];
 		NSString *password = [[self passwordField] text];

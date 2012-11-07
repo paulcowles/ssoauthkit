@@ -6,21 +6,21 @@
 //  Copyright 2010 All-Seeing Interactive. All rights reserved.
 //
 
-#import "ASIDownloadCache.h"
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIDownloadCache.h"
+#import "SCAVENGERASIHTTPRequest.h"
 #import <CommonCrypto/CommonHMAC.h>
 
-static ASIDownloadCache *sharedCache = nil;
+static SCAVENGERASIDownloadCache *sharedCache = nil;
 
 static NSString *sessionCacheFolder = @"SessionStore";
 static NSString *permanentCacheFolder = @"PermanentStore";
 
-@interface ASIDownloadCache ()
+@interface SCAVENGERASIDownloadCache ()
 + (NSString *)keyForURL:(NSURL *)url;
 - (NSString *)pathToFile:(NSString *)file;
 @end
 
-@implementation ASIDownloadCache
+@implementation SCAVENGERASIDownloadCache
 
 - (id)init
 {
@@ -88,7 +88,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	[[self accessLock] unlock];
 }
 
-- (void)updateExpiryForRequest:(ASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
+- (void)updateExpiryForRequest:(SCAVENGERASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
 {
 	NSString *headerPath = [self pathToStoreCachedResponseHeadersForRequest:request];
 	NSMutableDictionary *cachedHeaders = [NSMutableDictionary dictionaryWithContentsOfFile:headerPath];
@@ -103,7 +103,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	[cachedHeaders writeToFile:headerPath atomically:NO];
 }
 
-- (NSDate *)expiryDateForRequest:(ASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
+- (NSDate *)expiryDateForRequest:(SCAVENGERASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
 {
 	NSMutableDictionary *responseHeaders = [NSMutableDictionary dictionaryWithDictionary:[request responseHeaders]];
 
@@ -126,13 +126,13 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	} else {
 		NSString *expires = [responseHeaders objectForKey:@"Expires"];
 		if (expires) {
-			return [ASIHTTPRequest dateFromRFC1123String:expires];
+			return [SCAVENGERASIHTTPRequest dateFromRFC1123String:expires];
 		}
 	}
 	return nil;
 }
 
-- (void)storeResponseForRequest:(ASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
+- (void)storeResponseForRequest:(SCAVENGERASIHTTPRequest *)request maxAge:(NSTimeInterval)maxAge
 {
 	[[self accessLock] lock];
 
@@ -250,7 +250,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 }
 
 
-- (NSString *)pathToStoreCachedResponseDataForRequest:(ASIHTTPRequest *)request
+- (NSString *)pathToStoreCachedResponseDataForRequest:(SCAVENGERASIHTTPRequest *)request
 {
 	[[self accessLock] lock];
 	if (![self storagePath]) {
@@ -270,7 +270,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	return path;
 }
 
-- (NSString *)pathToStoreCachedResponseHeadersForRequest:(ASIHTTPRequest *)request
+- (NSString *)pathToStoreCachedResponseHeadersForRequest:(SCAVENGERASIHTTPRequest *)request
 {
 	[[self accessLock] lock];
 	if (![self storagePath]) {
@@ -304,12 +304,12 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	[[self accessLock] unlock];
 }
 
-- (void)removeCachedDataForRequest:(ASIHTTPRequest *)request
+- (void)removeCachedDataForRequest:(SCAVENGERASIHTTPRequest *)request
 {
 	[self removeCachedDataForURL:[request url]];
 }
 
-- (BOOL)isCachedDataCurrentForRequest:(ASIHTTPRequest *)request
+- (BOOL)isCachedDataCurrentForRequest:(SCAVENGERASIHTTPRequest *)request
 {
 	[[self accessLock] lock];
 	if (![self storagePath]) {
@@ -421,7 +421,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	[[self accessLock] unlock];
 }
 
-+ (BOOL)serverAllowsResponseCachingForRequest:(ASIHTTPRequest *)request
++ (BOOL)serverAllowsResponseCachingForRequest:(SCAVENGERASIHTTPRequest *)request
 {
 	NSString *cacheControl = [[[request responseHeaders] objectForKey:@"Cache-Control"] lowercaseString];
 	if (cacheControl) {
@@ -457,7 +457,7 @@ static NSString *permanentCacheFolder = @"PermanentStore";
 	return [NSString stringWithFormat:@"%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X%02X",result[0], result[1], result[2], result[3], result[4], result[5], result[6], result[7],result[8], result[9], result[10], result[11],result[12], result[13], result[14], result[15]]; 	
 }
 
-- (BOOL)canUseCachedDataForRequest:(ASIHTTPRequest *)request
+- (BOOL)canUseCachedDataForRequest:(SCAVENGERASIHTTPRequest *)request
 {
 	// Ensure the request is allowed to read from the cache
 	if ([request cachePolicy] & ASIDoNotReadFromCacheCachePolicy) {

@@ -6,20 +6,20 @@
 //  Copyright 2010 All-Seeing Interactive. All rights reserved.
 //
 
-#import "ASIDataDecompressor.h"
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIDataDecompressor.h"
+#import "SCAVENGERASIHTTPRequest.h"
 
 #define DATA_CHUNK_SIZE 262144 // Deal with gzipped data in 256KB chunks
 
-@interface ASIDataDecompressor ()
+@interface SCAVENGERASIDataDecompressor ()
 + (NSError *)inflateErrorWithCode:(int)code;
 @end;
 
-@implementation ASIDataDecompressor
+@implementation SCAVENGERASIDataDecompressor
 
 + (id)decompressor
 {
-	ASIDataDecompressor *decompressor = [[[self alloc] init] autorelease];
+	SCAVENGERASIDataDecompressor *decompressor = [[[self alloc] init] autorelease];
 	[decompressor setupStream];
 	return decompressor;
 }
@@ -109,7 +109,7 @@
 + (NSData *)uncompressData:(NSData*)compressedData error:(NSError **)err
 {
 	NSError *theError = nil;
-	NSData *outputData = [[ASIDataDecompressor decompressor] uncompressBytes:(Bytef *)[compressedData bytes] length:[compressedData length] error:&theError];
+	NSData *outputData = [[SCAVENGERASIDataDecompressor decompressor] uncompressBytes:(Bytef *)[compressedData bytes] length:[compressedData length] error:&theError];
 	if (theError) {
 		if (err) {
 			*err = theError;
@@ -145,7 +145,7 @@
 	NSError *theError = nil;
 	
 
-	ASIDataDecompressor *decompressor = [ASIDataDecompressor decompressor];
+	SCAVENGERASIDataDecompressor *decompressor = [SCAVENGERASIDataDecompressor decompressor];
 
 	NSInputStream *inputStream = [NSInputStream inputStreamWithFileAtPath:sourcePath];
 	[inputStream open];

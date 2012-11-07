@@ -191,7 +191,7 @@
 #pragma mark -
 #pragma mark ASIHTTPRequestDelegate
 
-- (void)requestFailed:(ASIHTTPRequest *)aRequest {
+- (void)requestFailed:(SCAVENGERASIHTTPRequest *)aRequest {
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
 	
 	// Handle bad password
@@ -212,7 +212,7 @@
 }
 
 
-- (void)requestFinished:(ASIHTTPRequest *)aRequest {
+- (void)requestFinished:(SCAVENGERASIHTTPRequest *)aRequest {
 	[super requestFinished:aRequest];
 
 	if ([[[aRequest url] path] isEqualToString:@"/oauth/access_token"]) {

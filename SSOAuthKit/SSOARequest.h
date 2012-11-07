@@ -6,11 +6,11 @@
 //  Copyright 2010-2011 Sam Soffes. All rights reserved.
 //
 
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIHTTPRequest.h"
 
 @class SSOAToken;
 
-@interface SSOARequest : ASIHTTPRequest {
+@interface SSOARequest : SCAVENGERASIHTTPRequest {
 
 @private
 	

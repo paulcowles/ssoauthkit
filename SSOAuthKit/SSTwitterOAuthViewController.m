@@ -11,7 +11,7 @@
 #import "SSOAToken.h"
 #import "SSOAFormRequest.h"
 #import "SSTwitterAuthViewControllerDelegate.h"
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIHTTPRequest.h"
 #import "JSONKit.h"
 #import <SSToolkit/SSLoadingView.h>
 #import <SSToolkit/UIImage+SSToolkitAdditions.h>
@@ -140,7 +140,7 @@
 #pragma mark -
 #pragma mark ASIHTTPRequestDelegate
 
-- (void)requestFinished:(ASIHTTPRequest *)aRequest {
+- (void)requestFinished:(SCAVENGERASIHTTPRequest *)aRequest {
 	[super requestFinished:aRequest];
 	
 	NSString *path = [[aRequest url] path];

@@ -24,7 +24,7 @@
 #import "ASIProgressDelegate.h"
 #import "ASICacheDelegate.h"
 
-@class ASIDataDecompressor;
+@class SCAVENGERASIDataDecompressor;
 
 extern NSString *ASIHTTPRequestVersion;
 
@@ -81,7 +81,7 @@ typedef void (^ASIProgressBlock)(unsigned long long size, unsigned long long tot
 typedef void (^ASIDataBlock)(NSData *data);
 #endif
 
-@interface ASIHTTPRequest : NSOperation <NSCopying> {
+@interface SCAVENGERASIHTTPRequest : NSOperation <NSCopying> {
 	
 	// The url for this operation, should include GET params in the query string where appropriate
 	NSURL *url; 
@@ -93,12 +93,12 @@ typedef void (^ASIDataBlock)(NSData *data);
 	NSURL *redirectURL;
 
 	// The delegate - will be notified of various changes in state via the ASIHTTPRequestDelegate protocol
-	id <ASIHTTPRequestDelegate> delegate;
+	id <SCAVENGERASIHTTPRequestDelegate> delegate;
 	
 	// Another delegate that is also notified of request status changes and progress updates
 	// Generally, you won't use this directly, but ASINetworkQueue sets itself as the queue so it can proxy updates to its own delegates
 	// NOTE: WILL BE RETAINED BY THE REQUEST
-	id <ASIHTTPRequestDelegate, ASIProgressDelegate> queue;
+	id <SCAVENGERASIHTTPRequestDelegate, ASIProgressDelegate> queue;
 	
 	// HTTP method to use (eg: GET / POST / PUT / DELETE / HEAD etc). Defaults to GET
 	NSString *requestMethod;
@@ -319,7 +319,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 	BOOL shouldResetDownloadProgress;
 	
 	// Used by HEAD requests when showAccurateProgress is YES to preset the content-length for this request
-	ASIHTTPRequest *mainRequest;
+	SCAVENGERASIHTTPRequest *mainRequest;
 	
 	// When NO, this request will only update the progress indicator when it completes
 	// When YES, this request will update the progress indicator according to how much data it has received so far
@@ -470,7 +470,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 	#endif
 	
 	// When downloading a gzipped response, the request will use this helper object to inflate the response
-	ASIDataDecompressor *dataDecompressor;
+	SCAVENGERASIDataDecompressor *dataDecompressor;
 	
 	// Controls how responses with a gzipped encoding are inflated (decompressed)
 	// When set to YES (This is the default):
@@ -490,7 +490,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 	BOOL isPACFileRequest;
 
 	// Used for downloading PAC files from http / https webservers
-	ASIHTTPRequest *PACFileRequest;
+	SCAVENGERASIHTTPRequest *PACFileRequest;
 
 	// Used for asynchronously reading PAC files from file:// URLs
 	NSInputStream *PACFileReadStream;
@@ -614,7 +614,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 #pragma mark HEAD request
 
 // Used by ASINetworkQueue to create a HEAD request appropriate for this request with the same headers (though you can use it yourself)
-- (ASIHTTPRequest *)HEADRequest;
+- (SCAVENGERASIHTTPRequest *)HEADRequest;
 
 #pragma mark upload/download progress
 
@@ -891,7 +891,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 // Threads returned by this method will need to run the runloop in default mode (eg CFRunLoopRun())
 // Requests will stop the runloop when they complete
 // If you have multiple requests sharing the thread you'll need to restart the runloop when this happens
-+ (NSThread *)threadForRequest:(ASIHTTPRequest *)request;
++ (NSThread *)threadForRequest:(SCAVENGERASIHTTPRequest *)request;
 
 
 #pragma mark ===
@@ -947,7 +947,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 @property (assign) unsigned long long postLength;
 @property (assign) BOOL shouldResetDownloadProgress;
 @property (assign) BOOL shouldResetUploadProgress;
-@property (assign) ASIHTTPRequest *mainRequest;
+@property (assign) SCAVENGERASIHTTPRequest *mainRequest;
 @property (assign) BOOL showAccurateProgress;
 @property (assign) unsigned long long totalBytesRead;
 @property (assign) unsigned long long totalBytesSent;
@@ -993,7 +993,7 @@ typedef void (^ASIDataBlock)(NSData *data);
 #if TARGET_OS_IPHONE && __IPHONE_OS_VERSION_MAX_ALLOWED >= __IPHONE_4_0
 @property (assign) BOOL shouldContinueWhenAppEntersBackground;
 #endif
-@property (retain) ASIDataDecompressor *dataDecompressor;
+@property (retain) SCAVENGERASIDataDecompressor *dataDecompressor;
 @property (assign) BOOL shouldWaitToInflateCompressedResponses;
 
 @end

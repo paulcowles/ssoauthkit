@@ -13,7 +13,7 @@
 @class SSOAToken;
 @class SSLoadingView;
 
-@interface SSTwitterAuthViewController : UIViewController <ASIHTTPRequestDelegate> {
+@interface SSTwitterAuthViewController : UIViewController <SCAVENGERASIHTTPRequestDelegate> {
 
 @private
 	

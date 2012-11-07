@@ -23,28 +23,28 @@
 		B27E1B3211F0D5E000165C54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E1B3111F0D5E000165C54 /* UIKit.framework */; };
 		B27E1B3411F0D5E000165C54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E1B3311F0D5E000165C54 /* libz.dylib */; };
 		B29851E611F0D865008B1A4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29851E511F0D865008B1A4A /* Security.framework */; };
-		B2CBDA5D1348D520009DDE4D /* ASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA051348D520009DDE4D /* ASIAuthenticationDialog.h */; };
-		B2CBDA5E1348D520009DDE4D /* ASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA061348D520009DDE4D /* ASIAuthenticationDialog.m */; };
+		B2CBDA5D1348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA051348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h */; };
+		B2CBDA5E1348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA061348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m */; };
 		B2CBDA5F1348D520009DDE4D /* ASICacheDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA071348D520009DDE4D /* ASICacheDelegate.h */; };
-		B2CBDA601348D520009DDE4D /* ASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA081348D520009DDE4D /* ASIDataCompressor.h */; };
-		B2CBDA611348D520009DDE4D /* ASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA091348D520009DDE4D /* ASIDataCompressor.m */; };
-		B2CBDA621348D520009DDE4D /* ASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA0A1348D520009DDE4D /* ASIDataDecompressor.h */; };
-		B2CBDA631348D520009DDE4D /* ASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA0B1348D520009DDE4D /* ASIDataDecompressor.m */; };
-		B2CBDA641348D520009DDE4D /* ASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA0C1348D520009DDE4D /* ASIDownloadCache.h */; };
-		B2CBDA651348D520009DDE4D /* ASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA0D1348D520009DDE4D /* ASIDownloadCache.m */; };
-		B2CBDA661348D520009DDE4D /* ASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA0E1348D520009DDE4D /* ASIFormDataRequest.h */; };
-		B2CBDA671348D520009DDE4D /* ASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA0F1348D520009DDE4D /* ASIFormDataRequest.m */; };
-		B2CBDA681348D520009DDE4D /* ASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA101348D520009DDE4D /* ASIHTTPRequest.h */; };
-		B2CBDA691348D520009DDE4D /* ASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA111348D520009DDE4D /* ASIHTTPRequest.m */; };
+		B2CBDA601348D520009DDE4D /* SCAVENGERASIDataCompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA081348D520009DDE4D /* SCAVENGERASIDataCompressor.h */; };
+		B2CBDA611348D520009DDE4D /* SCAVENGERASIDataCompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA091348D520009DDE4D /* SCAVENGERASIDataCompressor.m */; };
+		B2CBDA621348D520009DDE4D /* SCAVENGERASIDataDecompressor.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA0A1348D520009DDE4D /* SCAVENGERASIDataDecompressor.h */; };
+		B2CBDA631348D520009DDE4D /* SCAVENGERASIDataDecompressor.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA0B1348D520009DDE4D /* SCAVENGERASIDataDecompressor.m */; };
+		B2CBDA641348D520009DDE4D /* SCAVENGERASIDownloadCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA0C1348D520009DDE4D /* SCAVENGERASIDownloadCache.h */; };
+		B2CBDA651348D520009DDE4D /* SCAVENGERASIDownloadCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA0D1348D520009DDE4D /* SCAVENGERASIDownloadCache.m */; };
+		B2CBDA661348D520009DDE4D /* SCAVENGERASIFormDataRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA0E1348D520009DDE4D /* SCAVENGERASIFormDataRequest.h */; };
+		B2CBDA671348D520009DDE4D /* SCAVENGERASIFormDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA0F1348D520009DDE4D /* SCAVENGERASIFormDataRequest.m */; };
+		B2CBDA681348D520009DDE4D /* SCAVENGERASIHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA101348D520009DDE4D /* SCAVENGERASIHTTPRequest.h */; };
+		B2CBDA691348D520009DDE4D /* SCAVENGERASIHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA111348D520009DDE4D /* SCAVENGERASIHTTPRequest.m */; };
 		B2CBDA6A1348D520009DDE4D /* ASIHTTPRequestConfig.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA121348D520009DDE4D /* ASIHTTPRequestConfig.h */; };
 		B2CBDA6B1348D520009DDE4D /* ASIHTTPRequestDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA131348D520009DDE4D /* ASIHTTPRequestDelegate.h */; };
-		B2CBDA6C1348D520009DDE4D /* ASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA141348D520009DDE4D /* ASIInputStream.h */; };
-		B2CBDA6D1348D520009DDE4D /* ASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA151348D520009DDE4D /* ASIInputStream.m */; };
-		B2CBDA6E1348D520009DDE4D /* ASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA161348D520009DDE4D /* ASINetworkQueue.h */; };
-		B2CBDA6F1348D520009DDE4D /* ASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA171348D520009DDE4D /* ASINetworkQueue.m */; };
+		B2CBDA6C1348D520009DDE4D /* SCAVENGERASIInputStream.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA141348D520009DDE4D /* SCAVENGERASIInputStream.h */; };
+		B2CBDA6D1348D520009DDE4D /* SCAVENGERASIInputStream.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA151348D520009DDE4D /* SCAVENGERASIInputStream.m */; };
+		B2CBDA6E1348D520009DDE4D /* SCAVENGERASINetworkQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA161348D520009DDE4D /* SCAVENGERASINetworkQueue.h */; };
+		B2CBDA6F1348D520009DDE4D /* SCAVENGERASINetworkQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA171348D520009DDE4D /* SCAVENGERASINetworkQueue.m */; };
 		B2CBDA701348D520009DDE4D /* ASIProgressDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA181348D520009DDE4D /* ASIProgressDelegate.h */; };
-		B2CBDAAB1348D520009DDE4D /* Reachability.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA5B1348D520009DDE4D /* Reachability.h */; };
-		B2CBDAAC1348D520009DDE4D /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA5C1348D520009DDE4D /* Reachability.m */; };
+		B2CBDAAB1348D520009DDE4D /* SCAVENGERReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA5B1348D520009DDE4D /* SCAVENGERReachability.h */; };
+		B2CBDAAC1348D520009DDE4D /* SCAVENGERReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA5C1348D520009DDE4D /* SCAVENGERReachability.m */; };
 		B2E034CD121DC80C00D02434 /* NSDictionary+oaCompareKeys.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E03268121DC80B00D02434 /* NSDictionary+oaCompareKeys.h */; };
 		B2E034CE121DC80C00D02434 /* NSDictionary+oaCompareKeys.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E03269121DC80B00D02434 /* NSDictionary+oaCompareKeys.m */; };
 		B2E034CF121DC80C00D02434 /* NSURL+OAuthString.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E0326A121DC80B00D02434 /* NSURL+OAuthString.h */; };
@@ -64,8 +64,8 @@
 		B2E034DF121DC80C00D02434 /* SSTwitterOAuthViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0327A121DC80B00D02434 /* SSTwitterOAuthViewController.m */; };
 		B2E03540121DC80C00D02434 /* Base64Transcoder.c in Sources */ = {isa = PBXBuildFile; fileRef = B2E0332B121DC80B00D02434 /* Base64Transcoder.c */; };
 		B2E03541121DC80C00D02434 /* Base64Transcoder.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E0332C121DC80B00D02434 /* Base64Transcoder.h */; };
-		B2E03542121DC80C00D02434 /* OAHMAC_SHA1SignatureProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E0332D121DC80B00D02434 /* OAHMAC_SHA1SignatureProvider.h */; };
-		B2E03543121DC80C00D02434 /* OAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0332E121DC80B00D02434 /* OAHMAC_SHA1SignatureProvider.m */; };
+		B2E03542121DC80C00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E0332D121DC80B00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.h */; };
+		B2E03543121DC80C00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E0332E121DC80B00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.m */; };
 		B2E03544121DC80C00D02434 /* OASignatureProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = B2E0332F121DC80B00D02434 /* OASignatureProviding.h */; };
 		B2E03636121DC81E00D02434 /* SSOAuthKit_Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = B2E03635121DC81E00D02434 /* SSOAuthKit_Prefix.pch */; };
 		B2E03656121DC85D00D02434 /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E0363B121DC83C00D02434 /* libSSToolkit.a */; };
@@ -112,28 +112,28 @@
 		B27E1B3111F0D5E000165C54 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B27E1B3311F0D5E000165C54 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B29851E511F0D865008B1A4A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		B2CBDA051348D520009DDE4D /* ASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIAuthenticationDialog.h; sourceTree = "<group>"; };
-		B2CBDA061348D520009DDE4D /* ASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIAuthenticationDialog.m; sourceTree = "<group>"; };
+		B2CBDA051348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIAuthenticationDialog.h; sourceTree = "<group>"; };
+		B2CBDA061348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIAuthenticationDialog.m; sourceTree = "<group>"; };
 		B2CBDA071348D520009DDE4D /* ASICacheDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASICacheDelegate.h; sourceTree = "<group>"; };
-		B2CBDA081348D520009DDE4D /* ASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataCompressor.h; sourceTree = "<group>"; };
-		B2CBDA091348D520009DDE4D /* ASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataCompressor.m; sourceTree = "<group>"; };
-		B2CBDA0A1348D520009DDE4D /* ASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDataDecompressor.h; sourceTree = "<group>"; };
-		B2CBDA0B1348D520009DDE4D /* ASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDataDecompressor.m; sourceTree = "<group>"; };
-		B2CBDA0C1348D520009DDE4D /* ASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIDownloadCache.h; sourceTree = "<group>"; };
-		B2CBDA0D1348D520009DDE4D /* ASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIDownloadCache.m; sourceTree = "<group>"; };
-		B2CBDA0E1348D520009DDE4D /* ASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIFormDataRequest.h; sourceTree = "<group>"; };
-		B2CBDA0F1348D520009DDE4D /* ASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIFormDataRequest.m; sourceTree = "<group>"; };
-		B2CBDA101348D520009DDE4D /* ASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequest.h; sourceTree = "<group>"; };
-		B2CBDA111348D520009DDE4D /* ASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIHTTPRequest.m; sourceTree = "<group>"; };
+		B2CBDA081348D520009DDE4D /* SCAVENGERASIDataCompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIDataCompressor.h; sourceTree = "<group>"; };
+		B2CBDA091348D520009DDE4D /* SCAVENGERASIDataCompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIDataCompressor.m; sourceTree = "<group>"; };
+		B2CBDA0A1348D520009DDE4D /* SCAVENGERASIDataDecompressor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIDataDecompressor.h; sourceTree = "<group>"; };
+		B2CBDA0B1348D520009DDE4D /* SCAVENGERASIDataDecompressor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIDataDecompressor.m; sourceTree = "<group>"; };
+		B2CBDA0C1348D520009DDE4D /* SCAVENGERASIDownloadCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIDownloadCache.h; sourceTree = "<group>"; };
+		B2CBDA0D1348D520009DDE4D /* SCAVENGERASIDownloadCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIDownloadCache.m; sourceTree = "<group>"; };
+		B2CBDA0E1348D520009DDE4D /* SCAVENGERASIFormDataRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIFormDataRequest.h; sourceTree = "<group>"; };
+		B2CBDA0F1348D520009DDE4D /* SCAVENGERASIFormDataRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIFormDataRequest.m; sourceTree = "<group>"; };
+		B2CBDA101348D520009DDE4D /* SCAVENGERASIHTTPRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIHTTPRequest.h; sourceTree = "<group>"; };
+		B2CBDA111348D520009DDE4D /* SCAVENGERASIHTTPRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIHTTPRequest.m; sourceTree = "<group>"; };
 		B2CBDA121348D520009DDE4D /* ASIHTTPRequestConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestConfig.h; sourceTree = "<group>"; };
 		B2CBDA131348D520009DDE4D /* ASIHTTPRequestDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIHTTPRequestDelegate.h; sourceTree = "<group>"; };
-		B2CBDA141348D520009DDE4D /* ASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIInputStream.h; sourceTree = "<group>"; };
-		B2CBDA151348D520009DDE4D /* ASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASIInputStream.m; sourceTree = "<group>"; };
-		B2CBDA161348D520009DDE4D /* ASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASINetworkQueue.h; sourceTree = "<group>"; };
-		B2CBDA171348D520009DDE4D /* ASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASINetworkQueue.m; sourceTree = "<group>"; };
+		B2CBDA141348D520009DDE4D /* SCAVENGERASIInputStream.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASIInputStream.h; sourceTree = "<group>"; };
+		B2CBDA151348D520009DDE4D /* SCAVENGERASIInputStream.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASIInputStream.m; sourceTree = "<group>"; };
+		B2CBDA161348D520009DDE4D /* SCAVENGERASINetworkQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERASINetworkQueue.h; sourceTree = "<group>"; };
+		B2CBDA171348D520009DDE4D /* SCAVENGERASINetworkQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERASINetworkQueue.m; sourceTree = "<group>"; };
 		B2CBDA181348D520009DDE4D /* ASIProgressDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASIProgressDelegate.h; sourceTree = "<group>"; };
-		B2CBDA5B1348D520009DDE4D /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
-		B2CBDA5C1348D520009DDE4D /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		B2CBDA5B1348D520009DDE4D /* SCAVENGERReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGERReachability.h; sourceTree = "<group>"; };
+		B2CBDA5C1348D520009DDE4D /* SCAVENGERReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGERReachability.m; sourceTree = "<group>"; };
 		B2E03268121DC80B00D02434 /* NSDictionary+oaCompareKeys.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+oaCompareKeys.h"; sourceTree = "<group>"; };
 		B2E03269121DC80B00D02434 /* NSDictionary+oaCompareKeys.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+oaCompareKeys.m"; sourceTree = "<group>"; };
 		B2E0326A121DC80B00D02434 /* NSURL+OAuthString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+OAuthString.h"; sourceTree = "<group>"; };
@@ -153,8 +153,8 @@
 		B2E0327A121DC80B00D02434 /* SSTwitterOAuthViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SSTwitterOAuthViewController.m; sourceTree = "<group>"; };
 		B2E0332B121DC80B00D02434 /* Base64Transcoder.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = Base64Transcoder.c; sourceTree = "<group>"; };
 		B2E0332C121DC80B00D02434 /* Base64Transcoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Transcoder.h; sourceTree = "<group>"; };
-		B2E0332D121DC80B00D02434 /* OAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
-		B2E0332E121DC80B00D02434 /* OAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
+		B2E0332D121DC80B00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SCAVENGEROAHMAC_SHA1SignatureProvider.h; sourceTree = "<group>"; };
+		B2E0332E121DC80B00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SCAVENGEROAHMAC_SHA1SignatureProvider.m; sourceTree = "<group>"; };
 		B2E0332F121DC80B00D02434 /* OASignatureProviding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OASignatureProviding.h; sourceTree = "<group>"; };
 		B2E033BA121DC80C00D02434 /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
 		B2E03632121DC81100D02434 /* SSOAuthKit.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SSOAuthKit.bundle; sourceTree = "<group>"; };
@@ -296,25 +296,25 @@
 		B2CBDA041348D520009DDE4D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				B2CBDA051348D520009DDE4D /* ASIAuthenticationDialog.h */,
-				B2CBDA061348D520009DDE4D /* ASIAuthenticationDialog.m */,
+				B2CBDA051348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h */,
+				B2CBDA061348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m */,
 				B2CBDA071348D520009DDE4D /* ASICacheDelegate.h */,
-				B2CBDA081348D520009DDE4D /* ASIDataCompressor.h */,
-				B2CBDA091348D520009DDE4D /* ASIDataCompressor.m */,
-				B2CBDA0A1348D520009DDE4D /* ASIDataDecompressor.h */,
-				B2CBDA0B1348D520009DDE4D /* ASIDataDecompressor.m */,
-				B2CBDA0C1348D520009DDE4D /* ASIDownloadCache.h */,
-				B2CBDA0D1348D520009DDE4D /* ASIDownloadCache.m */,
-				B2CBDA0E1348D520009DDE4D /* ASIFormDataRequest.h */,
-				B2CBDA0F1348D520009DDE4D /* ASIFormDataRequest.m */,
-				B2CBDA101348D520009DDE4D /* ASIHTTPRequest.h */,
-				B2CBDA111348D520009DDE4D /* ASIHTTPRequest.m */,
+				B2CBDA081348D520009DDE4D /* SCAVENGERASIDataCompressor.h */,
+				B2CBDA091348D520009DDE4D /* SCAVENGERASIDataCompressor.m */,
+				B2CBDA0A1348D520009DDE4D /* SCAVENGERASIDataDecompressor.h */,
+				B2CBDA0B1348D520009DDE4D /* SCAVENGERASIDataDecompressor.m */,
+				B2CBDA0C1348D520009DDE4D /* SCAVENGERASIDownloadCache.h */,
+				B2CBDA0D1348D520009DDE4D /* SCAVENGERASIDownloadCache.m */,
+				B2CBDA0E1348D520009DDE4D /* SCAVENGERASIFormDataRequest.h */,
+				B2CBDA0F1348D520009DDE4D /* SCAVENGERASIFormDataRequest.m */,
+				B2CBDA101348D520009DDE4D /* SCAVENGERASIHTTPRequest.h */,
+				B2CBDA111348D520009DDE4D /* SCAVENGERASIHTTPRequest.m */,
 				B2CBDA121348D520009DDE4D /* ASIHTTPRequestConfig.h */,
 				B2CBDA131348D520009DDE4D /* ASIHTTPRequestDelegate.h */,
-				B2CBDA141348D520009DDE4D /* ASIInputStream.h */,
-				B2CBDA151348D520009DDE4D /* ASIInputStream.m */,
-				B2CBDA161348D520009DDE4D /* ASINetworkQueue.h */,
-				B2CBDA171348D520009DDE4D /* ASINetworkQueue.m */,
+				B2CBDA141348D520009DDE4D /* SCAVENGERASIInputStream.h */,
+				B2CBDA151348D520009DDE4D /* SCAVENGERASIInputStream.m */,
+				B2CBDA161348D520009DDE4D /* SCAVENGERASINetworkQueue.h */,
+				B2CBDA171348D520009DDE4D /* SCAVENGERASINetworkQueue.m */,
 				B2CBDA181348D520009DDE4D /* ASIProgressDelegate.h */,
 			);
 			path = Classes;
@@ -331,8 +331,8 @@
 		B2CBDA5A1348D520009DDE4D /* Reachability */ = {
 			isa = PBXGroup;
 			children = (
-				B2CBDA5B1348D520009DDE4D /* Reachability.h */,
-				B2CBDA5C1348D520009DDE4D /* Reachability.m */,
+				B2CBDA5B1348D520009DDE4D /* SCAVENGERReachability.h */,
+				B2CBDA5C1348D520009DDE4D /* SCAVENGERReachability.m */,
 			);
 			path = Reachability;
 			sourceTree = "<group>";
@@ -375,8 +375,8 @@
 			children = (
 				B2E0332B121DC80B00D02434 /* Base64Transcoder.c */,
 				B2E0332C121DC80B00D02434 /* Base64Transcoder.h */,
-				B2E0332D121DC80B00D02434 /* OAHMAC_SHA1SignatureProvider.h */,
-				B2E0332E121DC80B00D02434 /* OAHMAC_SHA1SignatureProvider.m */,
+				B2E0332D121DC80B00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.h */,
+				B2E0332E121DC80B00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.m */,
 				B2E0332F121DC80B00D02434 /* OASignatureProviding.h */,
 			);
 			path = OAuthConsumer;
@@ -408,23 +408,23 @@
 				B2E034DA121DC80C00D02434 /* SSOAuthKitConfiguration.h in Headers */,
 				B2E034DE121DC80C00D02434 /* SSTwitterOAuthViewController.h in Headers */,
 				B2E03541121DC80C00D02434 /* Base64Transcoder.h in Headers */,
-				B2E03542121DC80C00D02434 /* OAHMAC_SHA1SignatureProvider.h in Headers */,
+				B2E03542121DC80C00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.h in Headers */,
 				B2E03544121DC80C00D02434 /* OASignatureProviding.h in Headers */,
 				B2E03636121DC81E00D02434 /* SSOAuthKit_Prefix.pch in Headers */,
 				B202D4651348D35A00C389A8 /* JSONKit.h in Headers */,
-				B2CBDA5D1348D520009DDE4D /* ASIAuthenticationDialog.h in Headers */,
+				B2CBDA5D1348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h in Headers */,
 				B2CBDA5F1348D520009DDE4D /* ASICacheDelegate.h in Headers */,
-				B2CBDA601348D520009DDE4D /* ASIDataCompressor.h in Headers */,
-				B2CBDA621348D520009DDE4D /* ASIDataDecompressor.h in Headers */,
-				B2CBDA641348D520009DDE4D /* ASIDownloadCache.h in Headers */,
-				B2CBDA661348D520009DDE4D /* ASIFormDataRequest.h in Headers */,
-				B2CBDA681348D520009DDE4D /* ASIHTTPRequest.h in Headers */,
+				B2CBDA601348D520009DDE4D /* SCAVENGERASIDataCompressor.h in Headers */,
+				B2CBDA621348D520009DDE4D /* SCAVENGERASIDataDecompressor.h in Headers */,
+				B2CBDA641348D520009DDE4D /* SCAVENGERASIDownloadCache.h in Headers */,
+				B2CBDA661348D520009DDE4D /* SCAVENGERASIFormDataRequest.h in Headers */,
+				B2CBDA681348D520009DDE4D /* SCAVENGERASIHTTPRequest.h in Headers */,
 				B2CBDA6A1348D520009DDE4D /* ASIHTTPRequestConfig.h in Headers */,
 				B2CBDA6B1348D520009DDE4D /* ASIHTTPRequestDelegate.h in Headers */,
-				B2CBDA6C1348D520009DDE4D /* ASIInputStream.h in Headers */,
-				B2CBDA6E1348D520009DDE4D /* ASINetworkQueue.h in Headers */,
+				B2CBDA6C1348D520009DDE4D /* SCAVENGERASIInputStream.h in Headers */,
+				B2CBDA6E1348D520009DDE4D /* SCAVENGERASINetworkQueue.h in Headers */,
 				B2CBDA701348D520009DDE4D /* ASIProgressDelegate.h in Headers */,
-				B2CBDAAB1348D520009DDE4D /* Reachability.h in Headers */,
+				B2CBDAAB1348D520009DDE4D /* SCAVENGERReachability.h in Headers */,
 				B24ED8C6138C790F00FACB48 /* SSTwitterXAuthViewController.h in Headers */,
 				B24ED8CE138C79CF00FACB48 /* SSTwitterAuthViewControllerDelegate.h in Headers */,
 				B24ED8DA138C7A9B00FACB48 /* SSTwitterAuthViewController.h in Headers */,
@@ -518,17 +518,17 @@
 				B2E034DB121DC80C00D02434 /* SSOAuthKitConfiguration.m in Sources */,
 				B2E034DF121DC80C00D02434 /* SSTwitterOAuthViewController.m in Sources */,
 				B2E03540121DC80C00D02434 /* Base64Transcoder.c in Sources */,
-				B2E03543121DC80C00D02434 /* OAHMAC_SHA1SignatureProvider.m in Sources */,
+				B2E03543121DC80C00D02434 /* SCAVENGEROAHMAC_SHA1SignatureProvider.m in Sources */,
 				B202D4661348D35A00C389A8 /* JSONKit.m in Sources */,
-				B2CBDA5E1348D520009DDE4D /* ASIAuthenticationDialog.m in Sources */,
-				B2CBDA611348D520009DDE4D /* ASIDataCompressor.m in Sources */,
-				B2CBDA631348D520009DDE4D /* ASIDataDecompressor.m in Sources */,
-				B2CBDA651348D520009DDE4D /* ASIDownloadCache.m in Sources */,
-				B2CBDA671348D520009DDE4D /* ASIFormDataRequest.m in Sources */,
-				B2CBDA691348D520009DDE4D /* ASIHTTPRequest.m in Sources */,
-				B2CBDA6D1348D520009DDE4D /* ASIInputStream.m in Sources */,
-				B2CBDA6F1348D520009DDE4D /* ASINetworkQueue.m in Sources */,
-				B2CBDAAC1348D520009DDE4D /* Reachability.m in Sources */,
+				B2CBDA5E1348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m in Sources */,
+				B2CBDA611348D520009DDE4D /* SCAVENGERASIDataCompressor.m in Sources */,
+				B2CBDA631348D520009DDE4D /* SCAVENGERASIDataDecompressor.m in Sources */,
+				B2CBDA651348D520009DDE4D /* SCAVENGERASIDownloadCache.m in Sources */,
+				B2CBDA671348D520009DDE4D /* SCAVENGERASIFormDataRequest.m in Sources */,
+				B2CBDA691348D520009DDE4D /* SCAVENGERASIHTTPRequest.m in Sources */,
+				B2CBDA6D1348D520009DDE4D /* SCAVENGERASIInputStream.m in Sources */,
+				B2CBDA6F1348D520009DDE4D /* SCAVENGERASINetworkQueue.m in Sources */,
+				B2CBDAAC1348D520009DDE4D /* SCAVENGERReachability.m in Sources */,
 				B24ED8C7138C790F00FACB48 /* SSTwitterXAuthViewController.m in Sources */,
 				B24ED8DB138C7A9B00FACB48 /* SSTwitterAuthViewController.m in Sources */,
 			);

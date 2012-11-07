@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "ASICacheDelegate.h"
 
-@interface ASIDownloadCache : NSObject <ASICacheDelegate> {
+@interface SCAVENGERASIDownloadCache : NSObject <ASICacheDelegate> {
 	
 	// The default cache policy for this cache
 	// Requests that store data in the cache will use this cache policy if their cache policy is set to ASIUseDefaultCachePolicy
@@ -33,7 +33,7 @@
 + (id)sharedCache;
 
 // A helper function that determines if the server has requested data should not be cached by looking at the request's response headers
-+ (BOOL)serverAllowsResponseCachingForRequest:(ASIHTTPRequest *)request;
++ (BOOL)serverAllowsResponseCachingForRequest:(SCAVENGERASIHTTPRequest *)request;
 
 @property (assign, nonatomic) ASICachePolicy defaultCachePolicy;
 @property (retain, nonatomic) NSString *storagePath;

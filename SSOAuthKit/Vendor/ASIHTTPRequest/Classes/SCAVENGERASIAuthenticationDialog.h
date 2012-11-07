@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-@class ASIHTTPRequest;
+@class SCAVENGERASIHTTPRequest;
 
 typedef enum _ASIAuthenticationType {
 	ASIStandardAuthenticationType = 0,
@@ -18,17 +18,17 @@ typedef enum _ASIAuthenticationType {
 @interface ASIAutorotatingViewController : UIViewController
 @end
 
-@interface ASIAuthenticationDialog : ASIAutorotatingViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource> {
-	ASIHTTPRequest *request;
+@interface SCAVENGERASIAuthenticationDialog : ASIAutorotatingViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource> {
+	SCAVENGERASIHTTPRequest *request;
 	ASIAuthenticationType type;
 	UITableView *tableView;
 	UIViewController *presentingController;
 	BOOL didEnableRotationNotifications;
 }
-+ (void)presentAuthenticationDialogForRequest:(ASIHTTPRequest *)request;
++ (void)presentAuthenticationDialogForRequest:(SCAVENGERASIHTTPRequest *)request;
 + (void)dismiss;
 
-@property (retain) ASIHTTPRequest *request;
+@property (retain) SCAVENGERASIHTTPRequest *request;
 @property (assign) ASIAuthenticationType type;
 @property (assign) BOOL didEnableRotationNotifications;
 @property (retain, nonatomic) UIViewController *presentingController;

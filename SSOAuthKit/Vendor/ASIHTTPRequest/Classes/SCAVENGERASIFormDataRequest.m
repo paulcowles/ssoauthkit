@@ -6,11 +6,11 @@
 //  Copyright 2008-2009 All-Seeing Interactive. All rights reserved.
 //
 
-#import "ASIFormDataRequest.h"
+#import "SCAVENGERASIFormDataRequest.h"
 
 
 // Private stuff
-@interface ASIFormDataRequest ()
+@interface SCAVENGERASIFormDataRequest ()
 - (void)buildMultipartFormDataPostBody;
 - (void)buildURLEncodedPostBody;
 - (void)appendPostString:(NSString *)string;
@@ -25,7 +25,7 @@
 
 @end
 
-@implementation ASIFormDataRequest
+@implementation SCAVENGERASIFormDataRequest
 
 #pragma mark utilities
 - (NSString*)encodeURL:(NSString *)string
@@ -114,7 +114,7 @@
 
 	// If we were given the path to a file, and the user didn't specify a mime type, we can detect it from the file extension
 	if (!contentType) {
-		contentType = [ASIHTTPRequest mimeTypeForFileAtPath:filePath];
+		contentType = [SCAVENGERASIHTTPRequest mimeTypeForFileAtPath:filePath];
 	}
 	[self addData:filePath withFileName:fileName andContentType:contentType forKey:key];
 }
@@ -342,7 +342,7 @@
 
 - (id)copyWithZone:(NSZone *)zone
 {
-	ASIFormDataRequest *newRequest = [super copyWithZone:zone];
+	SCAVENGERASIFormDataRequest *newRequest = [super copyWithZone:zone];
 	[newRequest setPostData:[[[self postData] mutableCopyWithZone:zone] autorelease]];
 	[newRequest setFileData:[[[self fileData] mutableCopyWithZone:zone] autorelease]];
 	[newRequest setPostFormat:[self postFormat]];

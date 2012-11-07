@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIHTTPRequest.h"
 #import "ASIHTTPRequestConfig.h"
 
 typedef enum _ASIPostFormat {
@@ -16,7 +16,7 @@ typedef enum _ASIPostFormat {
 	
 } ASIPostFormat;
 
-@interface ASIFormDataRequest : ASIHTTPRequest <NSCopying> {
+@interface SCAVENGERASIFormDataRequest : SCAVENGERASIHTTPRequest <NSCopying> {
 
 	// Parameters that will be POSTed to the url
 	NSMutableArray *postData;

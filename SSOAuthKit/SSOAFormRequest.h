@@ -6,11 +6,11 @@
 //  Copyright 2010-2011 Sam Soffes. All rights reserved.
 //
 
-#import "ASIFormDataRequest.h"
+#import "SCAVENGERASIFormDataRequest.h"
 
 @class SSOAToken;
 
-@interface SSOAFormRequest : ASIFormDataRequest {
+@interface SSOAFormRequest : SCAVENGERASIFormDataRequest {
 	
 @private
 	

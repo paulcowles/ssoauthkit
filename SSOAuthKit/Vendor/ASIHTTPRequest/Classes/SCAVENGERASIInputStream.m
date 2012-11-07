@@ -6,32 +6,32 @@
 //  Copyright 2009 All-Seeing Interactive. All rights reserved.
 //
 
-#import "ASIInputStream.h"
-#import "ASIHTTPRequest.h"
+#import "SCAVENGERASIInputStream.h"
+#import "SCAVENGERASIHTTPRequest.h"
 
 // Used to ensure only one request can read data at once
 static NSLock *readLock = nil;
 
-@implementation ASIInputStream
+@implementation SCAVENGERASIInputStream
 
 + (void)initialize
 {
-	if (self == [ASIInputStream class]) {
+	if (self == [SCAVENGERASIInputStream class]) {
 		readLock = [[NSLock alloc] init];
 	}
 }
 
-+ (id)inputStreamWithFileAtPath:(NSString *)path request:(ASIHTTPRequest *)theRequest
++ (id)inputStreamWithFileAtPath:(NSString *)path request:(SCAVENGERASIHTTPRequest *)theRequest
 {
-	ASIInputStream *theStream = [[[self alloc] init] autorelease];
+	SCAVENGERASIInputStream *theStream = [[[self alloc] init] autorelease];
 	[theStream setRequest:theRequest];
 	[theStream setStream:[NSInputStream inputStreamWithFileAtPath:path]];
 	return theStream;
 }
 
-+ (id)inputStreamWithData:(NSData *)data request:(ASIHTTPRequest *)theRequest
++ (id)inputStreamWithData:(NSData *)data request:(SCAVENGERASIHTTPRequest *)theRequest
 {
-	ASIInputStream *theStream = [[[self alloc] init] autorelease];
+	SCAVENGERASIInputStream *theStream = [[[self alloc] init] autorelease];
 	[theStream setRequest:theRequest];
 	[theStream setStream:[NSInputStream inputStreamWithData:data]];
 	return theStream;
@@ -49,8 +49,8 @@ static NSLock *readLock = nil;
 {
 	[readLock lock];
 	unsigned long toRead = len;
-	if ([ASIHTTPRequest isBandwidthThrottled]) {
-		toRead = [ASIHTTPRequest maxUploadReadLength];
+	if ([SCAVENGERASIHTTPRequest isBandwidthThrottled]) {
+		toRead = [SCAVENGERASIHTTPRequest maxUploadReadLength];
 		if (toRead > len) {
 			toRead = len;
 		} else if (toRead == 0) {
@@ -58,7 +58,7 @@ static NSLock *readLock = nil;
 		}
 		[request performThrottling];
 	}
-	[ASIHTTPRequest incrementBandwidthUsedInLastSecond:toRead];
+	[SCAVENGERASIHTTPRequest incrementBandwidthUsedInLastSecond:toRead];
 	[readLock unlock];
 	return [stream read:buffer maxLength:toRead];
 }
