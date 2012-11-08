@@ -22,7 +22,7 @@ static const NSUInteger kDomainRow = 0;
 static const NSUInteger kDomainSection = 1;
 
 
-@implementation ASIAutorotatingViewController
+@implementation SCAVENGERASIAutorotatingViewController
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
 {
@@ -178,7 +178,7 @@ static const NSUInteger kDomainSection = 1;
 - (UIViewController *)presentingController
 {
 	if (!presentingController) {
-		presentingController = [[ASIAutorotatingViewController alloc] initWithNibName:nil bundle:nil];
+		presentingController = [[SCAVENGERASIAutorotatingViewController alloc] initWithNibName:nil bundle:nil];
 
 		// Attach to the window, but don't interfere.
 		UIWindow *window = [[[UIApplication sharedApplication] windows] objectAtIndex:0];

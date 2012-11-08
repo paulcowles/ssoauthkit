@@ -15,10 +15,10 @@ typedef enum _ASIAuthenticationType {
     ASIProxyAuthenticationType = 1
 } ASIAuthenticationType;
 
-@interface ASIAutorotatingViewController : UIViewController
+@interface SCAVENGERASIAutorotatingViewController : UIViewController
 @end
 
-@interface SCAVENGERASIAuthenticationDialog : ASIAutorotatingViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource> {
+@interface SCAVENGERASIAuthenticationDialog : SCAVENGERASIAutorotatingViewController <UIActionSheetDelegate, UITableViewDelegate, UITableViewDataSource> {
 	SCAVENGERASIHTTPRequest *request;
 	ASIAuthenticationType type;
 	UITableView *tableView;

@@ -130,9 +130,9 @@ enum {
 };
 
 
-extern NSString *const kInternetConnection;
-extern NSString *const kLocalWiFiConnection;
-extern NSString *const kReachabilityChangedNotification;
+extern NSString *const SCAVENGERkInternetConnection;
+extern NSString *const SCAVENGERkLocalWiFiConnection;
+extern NSString *const SCAVENGERkReachabilityChangedNotification;
 
 @interface SCAVENGERReachability: NSObject {
 	
