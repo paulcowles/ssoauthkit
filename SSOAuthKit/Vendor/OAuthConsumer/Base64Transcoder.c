@@ -57,7 +57,7 @@ const u_int8_t SCAVENGERkBase64EncodeTable[64] = {
 -5 = Illegal noise (null byte)
 */
 
-const int8_t kBase64DecodeTable[128] = {
+const int8_t SCAVENGERkBase64DecodeTable[128] = {
 	/* 0x00 */ -5, 	/* 0x01 */ -3, 	/* 0x02 */ -3, 	/* 0x03 */ -3,
 	/* 0x04 */ -3, 	/* 0x05 */ -3, 	/* 0x06 */ -3, 	/* 0x07 */ -3,
 	/* 0x08 */ -3, 	/* 0x09 */ -2, 	/* 0x0a */ -2, 	/* 0x0b */ -2,
@@ -92,14 +92,14 @@ const int8_t kBase64DecodeTable[128] = {
 	/* '|' */ -3,	/* '}' */ -3,	/* '~' */ -3,	/* 0x7f */ -3
 };
 
-const u_int8_t kBits_00000011 = 0x03;
-const u_int8_t kBits_00001111 = 0x0F;
-const u_int8_t kBits_00110000 = 0x30;
-const u_int8_t kBits_00111100 = 0x3C;
-const u_int8_t kBits_00111111 = 0x3F;
-const u_int8_t kBits_11000000 = 0xC0;
-const u_int8_t kBits_11110000 = 0xF0;
-const u_int8_t kBits_11111100 = 0xFC;
+const u_int8_t SCAVENGERkBits_00000011 = 0x03;
+const u_int8_t SCAVENGERkBits_00001111 = 0x0F;
+const u_int8_t SCAVENGERkBits_00110000 = 0x30;
+const u_int8_t SCAVENGERkBits_00111100 = 0x3C;
+const u_int8_t SCAVENGERkBits_00111111 = 0x3F;
+const u_int8_t SCAVENGERkBits_11000000 = 0xC0;
+const u_int8_t SCAVENGERkBits_11110000 = 0xF0;
+const u_int8_t SCAVENGERkBits_11111100 = 0xFC;
 
 size_t SCAVENGEREstimateBas64EncodedDataSize(size_t inDataSize)
 {
@@ -108,7 +108,7 @@ theEncodedDataSize = theEncodedDataSize / 72 * 74 + theEncodedDataSize % 72;
 return(theEncodedDataSize);
 }
 
-size_t EstimateBas64DecodedDataSize(size_t inDataSize)
+size_t SCAVENGEREstimateBas64DecodedDataSize(size_t inDataSize)
 {
 size_t theDecodedDataSize = (int)ceil(inDataSize / 4.0) * 3;
 //theDecodedDataSize = theDecodedDataSize / 72 * 74 + theDecodedDataSize % 72;
@@ -125,10 +125,10 @@ const u_int8_t *theInPtr = (const u_int8_t *)inInputData;
 u_int32_t theInIndex = 0, theOutIndex = 0;
 for (; theInIndex < (inInputDataSize / 3) * 3; theInIndex += 3)
 	{
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & kBits_11111100) >> 2];
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & kBits_00000011) << 4 | (theInPtr[theInIndex + 1] & kBits_11110000) >> 4];
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex + 1] & kBits_00001111) << 2 | (theInPtr[theInIndex + 2] & kBits_11000000) >> 6];
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex + 2] & kBits_00111111) >> 0];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & SCAVENGERkBits_11111100) >> 2];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & SCAVENGERkBits_00000011) << 4 | (theInPtr[theInIndex + 1] & SCAVENGERkBits_11110000) >> 4];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex + 1] & SCAVENGERkBits_00001111) << 2 | (theInPtr[theInIndex + 2] & SCAVENGERkBits_11000000) >> 6];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex + 2] & SCAVENGERkBits_00111111) >> 0];
 	if (theOutIndex % 74 == 72)
 		{
 		outOutputData[theOutIndex++] = '\r';
@@ -138,8 +138,8 @@ for (; theInIndex < (inInputDataSize / 3) * 3; theInIndex += 3)
 const size_t theRemainingBytes = inInputDataSize - theInIndex;
 if (theRemainingBytes == 1)
 	{
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & kBits_11111100) >> 2];
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & kBits_00000011) << 4 | (0 & kBits_11110000) >> 4];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & SCAVENGERkBits_11111100) >> 2];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & SCAVENGERkBits_00000011) << 4 | (0 & SCAVENGERkBits_11110000) >> 4];
 	outOutputData[theOutIndex++] = '=';
 	outOutputData[theOutIndex++] = '=';
 	if (theOutIndex % 74 == 72)
@@ -154,9 +154,9 @@ if (theRemainingBytes == 1)
 	}
 else if (theRemainingBytes == 2)
 	{
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & kBits_11111100) >> 2];
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & kBits_00000011) << 4 | (theInPtr[theInIndex + 1] & kBits_11110000) >> 4];
-	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex + 1] & kBits_00001111) << 2 | (0 & kBits_11000000) >> 6];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & SCAVENGERkBits_11111100) >> 2];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex] & SCAVENGERkBits_00000011) << 4 | (theInPtr[theInIndex + 1] & SCAVENGERkBits_11110000) >> 4];
+	outOutputData[theOutIndex++] = SCAVENGERkBase64EncodeTable[(theInPtr[theInIndex + 1] & SCAVENGERkBits_00001111) << 2 | (0 & SCAVENGERkBits_11000000) >> 6];
 	outOutputData[theOutIndex++] = '=';
 	if (theOutIndex % 74 == 72)
 		{
@@ -171,11 +171,11 @@ else if (theRemainingBytes == 2)
 return(true);
 }
 
-bool Base64DecodeData(const void *inInputData, size_t inInputDataSize, void *ioOutputData, size_t *ioOutputDataSize)
+bool SCAVENGERBase64DecodeData(const void *inInputData, size_t inInputDataSize, void *ioOutputData, size_t *ioOutputDataSize)
 {
 memset(ioOutputData, '.', *ioOutputDataSize);
 
-size_t theDecodedDataSize = EstimateBas64DecodedDataSize(inInputDataSize);
+size_t theDecodedDataSize = SCAVENGEREstimateBas64DecodedDataSize(inInputDataSize);
 if (*ioOutputDataSize < theDecodedDataSize)
 	return(false);
 *ioOutputDataSize = 0;
@@ -189,44 +189,44 @@ for (; theInIndex < inInputDataSize; )
 	int8_t theSextet = 0;
 	
 	int8_t theCurrentInputOctet = theInPtr[theInIndex];
-	theSextet = kBase64DecodeTable[theCurrentInputOctet];
+	theSextet = SCAVENGERkBase64DecodeTable[theCurrentInputOctet];
 	if (theSextet == -1)
 		break;
 	while (theSextet == -2)
 		{
 		theCurrentInputOctet = theInPtr[++theInIndex];
-		theSextet = kBase64DecodeTable[theCurrentInputOctet];
+		theSextet = SCAVENGERkBase64DecodeTable[theCurrentInputOctet];
 		}
 	while (theSextet == -3)
 		{
 		theCurrentInputOctet = theInPtr[++theInIndex];
-		theSextet = kBase64DecodeTable[theCurrentInputOctet];
+		theSextet = SCAVENGERkBase64DecodeTable[theCurrentInputOctet];
 		}
 	if (theSequence == 0)
 		{
-		theOutputOctet = (theSextet >= 0 ? theSextet : 0) << 2 & kBits_11111100;
+		theOutputOctet = (theSextet >= 0 ? theSextet : 0) << 2 & SCAVENGERkBits_11111100;
 		}
 	else if (theSequence == 1)
 		{
-		theOutputOctet |= (theSextet >- 0 ? theSextet : 0) >> 4 & kBits_00000011;
+		theOutputOctet |= (theSextet >- 0 ? theSextet : 0) >> 4 & SCAVENGERkBits_00000011;
 		theOutPtr[theOutIndex++] = theOutputOctet;
 		}
 	else if (theSequence == 2)
 		{
-		theOutputOctet = (theSextet >= 0 ? theSextet : 0) << 4 & kBits_11110000;
+		theOutputOctet = (theSextet >= 0 ? theSextet : 0) << 4 & SCAVENGERkBits_11110000;
 		}
 	else if (theSequence == 3)
 		{
-		theOutputOctet |= (theSextet >= 0 ? theSextet : 0) >> 2 & kBits_00001111;
+		theOutputOctet |= (theSextet >= 0 ? theSextet : 0) >> 2 & SCAVENGERkBits_00001111;
 		theOutPtr[theOutIndex++] = theOutputOctet;
 		}
 	else if (theSequence == 4)
 		{
-		theOutputOctet = (theSextet >= 0 ? theSextet : 0) << 6 & kBits_11000000;
+		theOutputOctet = (theSextet >= 0 ? theSextet : 0) << 6 & SCAVENGERkBits_11000000;
 		}
 	else if (theSequence == 5)
 		{
-		theOutputOctet |= (theSextet >= 0 ? theSextet : 0) >> 0 & kBits_00111111;
+		theOutputOctet |= (theSextet >= 0 ? theSextet : 0) >> 0 & SCAVENGERkBits_00111111;
 		theOutPtr[theOutIndex++] = theOutputOctet;
 		}
 	theSequence = (theSequence + 1) % 6;

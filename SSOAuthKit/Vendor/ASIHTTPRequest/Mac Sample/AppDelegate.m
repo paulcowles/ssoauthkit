@@ -173,7 +173,7 @@
 - (IBAction)throttleBandwidth:(id)sender
 {
 	if ([(NSButton *)sender state] == NSOnState) {
-		[ASIHTTPRequest setMaxBandwidthPerSecond:ASIWWANBandwidthThrottleAmount];
+		[ASIHTTPRequest setMaxBandwidthPerSecond:SCAVENGERASIWWANBandwidthThrottleAmount];
 	} else {
 		[ASIHTTPRequest setMaxBandwidthPerSecond:0];
 	}

@@ -950,7 +950,7 @@ IMPORTANT
 	complete = NO;
 	
 	// Now we'll test with throttling
-	[ASIHTTPRequest setMaxBandwidthPerSecond:ASIWWANBandwidthThrottleAmount];
+	[ASIHTTPRequest setMaxBandwidthPerSecond:SCAVENGERASIWWANBandwidthThrottleAmount];
 	
 	for (i=0; i<5; i++) {
 		ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/i/logo.png"]];
@@ -1014,7 +1014,7 @@ IMPORTANT
 	complete = NO;
 	
 	// Now we'll test with throttling
-	[ASIHTTPRequest setMaxBandwidthPerSecond:ASIWWANBandwidthThrottleAmount];
+	[ASIHTTPRequest setMaxBandwidthPerSecond:SCAVENGERASIWWANBandwidthThrottleAmount];
 
 	for (i=0; i<10; i++) {
 		ASIHTTPRequest *request = [ASIHTTPRequest requestWithURL:[NSURL URLWithString:@"http://allseeing-i.com/ignore"]];
