@@ -11,7 +11,7 @@
 #import <QuartzCore/QuartzCore.h>
 
 static SCAVENGERASIAuthenticationDialog *sharedDialog = nil;
-BOOL isDismissing = NO;
+BOOL SCAVENGERisDismissing = NO;
 static NSMutableArray *requestsNeedingAuthentication = nil;
 
 static const NSUInteger kUsernameRow = 0;

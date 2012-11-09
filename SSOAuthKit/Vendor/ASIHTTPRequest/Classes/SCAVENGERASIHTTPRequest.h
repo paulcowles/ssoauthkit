@@ -26,7 +26,7 @@
 
 @class SCAVENGERASIDataDecompressor;
 
-extern NSString *ASIHTTPRequestVersion;
+extern NSString *SCAVENGERASIHTTPRequestVersion;
 
 // Make targeting different platforms more reliable
 // See: http://www.blumtnwerx.com/blog/2009/06/cross-sdk-code-hygiene-in-xcode/
@@ -71,7 +71,7 @@ extern NSString* const SCAVENGERNetworkRequestErrorDomain;
 // You can use this number to throttle upload and download bandwidth in iPhone OS apps send or receive a large amount of data
 // This may help apps that might otherwise be rejected for inclusion into the app store for using excessive bandwidth
 // This number is not official, as far as I know there is no officially documented bandwidth limit
-extern unsigned long const ASIWWANBandwidthThrottleAmount;
+extern unsigned long const SCAVENGERASIWWANBandwidthThrottleAmount;
 
 #if NS_BLOCKS_AVAILABLE
 typedef void (^ASIBasicBlock)(void);
