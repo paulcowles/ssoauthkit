@@ -17,6 +17,7 @@
 #import <SSToolkit/UIImage+SSToolkitAdditions.h>
 #import <SSToolkit/UIView+SSToolkitAdditions.h>
 #import <SSToolkit/NSDictionary+SSToolkitAdditions.h>
+#import <SSToolkit/NSURL+SSToolkitAdditions.h>
 
 @interface SSTwitterOAuthViewController (Private)
 - (void)_requestRequestToken;
@@ -223,14 +224,13 @@
 		return YES;
 	}
 	
-	NSString *body = [[NSString alloc] initWithData:[aRequest HTTPBody] encoding:NSUTF8StringEncoding];
-	NSDictionary *params = [NSDictionary dictionaryWithFormEncodedString:body];
-	[body release];
+    // Extract OAuth parameters
+    NSDictionary *urlParameters = [url queryDictionary];
 	
 	// TODO: allow signup too
 	if ([[url host] isEqualToString:@"api.twitter.com"] && [[url path] isEqualToString:@"/oauth/authorize"]) {
 		// Handle cancel
-		if ([params objectForKey:@"cancel"]) {
+		if ([urlParameters objectForKey:@"cancel"]) {
 			[self cancel:self];
 			return NO;
 		}
@@ -242,7 +242,7 @@
 	// Check for completion redirect instead of pin
 	NSString *currentURLString = [_authorizationView stringByEvaluatingJavaScriptFromString:@"location.href"];
 	if ([currentURLString isEqualToString:@"https://api.twitter.com/oauth/authorize"]) {
-		[self _verifyAccessToken:[params objectForKey:@"oauth_verifier"]];
+		[self _verifyAccessToken:[urlParameters objectForKey:@"oauth_verifier"]];
 	}
 	
 	return NO;
