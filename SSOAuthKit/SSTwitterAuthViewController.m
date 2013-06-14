@@ -101,7 +101,7 @@ static NSString *kSSTwitterAuthViewControllerErrorDomain = @"com.samsoffes.sstwi
 	
 	_loadingView.text = @"Saving...";
 	
-	NSURL *url = [[NSURL alloc] initWithString:@"https://api.twitter.com/1/account/verify_credentials.json"];
+	NSURL *url = [[NSURL alloc] initWithString:@"https://api.twitter.com/1.1/account/verify_credentials.json"];
 	
 	SSOAFormRequest *aRequest = [[SSOAFormRequest alloc] initWithURL:url];
 	aRequest.requestMethod = @"GET";
