@@ -156,7 +156,7 @@ static NSString *kSSTwitterAuthViewControllerErrorDomain = @"com.samsoffes.sstwi
 	NSString *path = [[aRequest url] path];
 	
 	// Get user
-	if ([path isEqualToString:@"/1/account/verify_credentials.json"]) {
+	if ([path isEqualToString:@"/1.1/account/verify_credentials.json"]) {
 		NSError *jsonError = nil;
 		NSDictionary *dictionary = [[aRequest responseData] objectFromJSONDataWithParseOptions:0 error:&jsonError];
 		if (!dictionary) {
