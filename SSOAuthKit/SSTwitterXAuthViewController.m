@@ -46,6 +46,12 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    if ( [self respondsToSelector:@selector(extendedLayoutIncludesOpaqueBars)] ) {
+        self.extendedLayoutIncludesOpaqueBars = YES;
+    }
+    if ( [self respondsToSelector:@selector(edgesForExtendedLayout)] ) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 	
 	UIBarButtonItem *signInButton = [[UIBarButtonItem alloc] initWithTitle:@"Sign In" style:UIBarButtonItemStyleDone target:self action:@selector(signIn:)];
 	signInButton.enabled = NO;

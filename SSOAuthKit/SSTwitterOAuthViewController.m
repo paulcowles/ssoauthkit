@@ -42,6 +42,13 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    
+    if ( [self respondsToSelector:@selector(extendedLayoutIncludesOpaqueBars)] ) {
+        self.extendedLayoutIncludesOpaqueBars = YES;
+    }
+    if ( [self respondsToSelector:@selector(edgesForExtendedLayout)] ) {
+        self.edgesForExtendedLayout = UIRectEdgeNone;
+    }
 	
 	// Background image
 	UIImageView *backgroundView = [[UIImageView alloc] initWithFrame:CGRectMake(0.0f, 0.0f, self.view.frame.size.width, 100.0f)];
