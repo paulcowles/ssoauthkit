@@ -8,7 +8,6 @@
 
 @interface NSArray (SSToolkitAdditions)
 
-- (id)firstObject;
 - (id)randomObject;
 - (NSArray *)shuffledArray;
 
