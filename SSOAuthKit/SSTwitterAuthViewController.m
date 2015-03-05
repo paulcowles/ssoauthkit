@@ -61,6 +61,18 @@ static NSString *kSSTwitterAuthViewControllerErrorDomain = @"com.samsoffes.sstwi
 	self.navigationItem.leftBarButtonItem = cancelButton;
 	[cancelButton release];
 	
+	// Add toolbar tint color
+	NSDictionary *navigationBarColor = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"TOOLBAR_TINT"];
+	NSNumber *redBarColor = (NSNumber *)[navigationBarColor objectForKey:@"Red"];
+	NSNumber *greenBarColor = (NSNumber *)[navigationBarColor objectForKey:@"Green"];
+	NSNumber *blueBarColor = (NSNumber *)[navigationBarColor objectForKey:@"Blue"];
+	self.navigationController.navigationBar.barTintColor = [UIColor colorWithRed:(redBarColor.floatValue/255.0f) green:(greenBarColor.floatValue/255.0f) blue:(blueBarColor.floatValue/255.0f) alpha:1.0f];
+	NSDictionary *navigationColor = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"TOOLBAR_TINT_TEXT_COLOR"];
+	NSNumber *redColor = (NSNumber *)[navigationColor objectForKey:@"Red"];
+	NSNumber *greenColor = (NSNumber *)[navigationColor objectForKey:@"Green"];
+	NSNumber *blueColor = (NSNumber *)[navigationColor objectForKey:@"Blue"];
+	self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:(redColor.floatValue/255.0f) green:(greenColor.floatValue/255.0f) blue:(blueColor.floatValue/255.0f) alpha:1.0f];
+	
 	// Loading
 	_loadingView = [[SSLoadingView alloc] initWithFrame:CGRectZero];
 	_loadingView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
