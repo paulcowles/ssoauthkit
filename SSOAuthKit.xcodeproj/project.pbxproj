@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B84B8FC1B403BE600ACF2A1 /* libz.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B84B8FA1B403BD300ACF2A1 /* libz.1.dylib */; };
 		B202D4651348D35A00C389A8 /* JSONKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B202D4621348D35A00C389A8 /* JSONKit.h */; };
 		B202D4661348D35A00C389A8 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = B202D4631348D35A00C389A8 /* JSONKit.m */; };
 		B24ED8C6138C790F00FACB48 /* SSTwitterXAuthViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = B24ED8C4138C790F00FACB48 /* SSTwitterXAuthViewController.h */; };
@@ -21,7 +22,6 @@
 		B27E1B2E11F0D5E000165C54 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E1B2D11F0D5E000165C54 /* QuartzCore.framework */; };
 		B27E1B3011F0D5E000165C54 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E1B2F11F0D5E000165C54 /* SystemConfiguration.framework */; };
 		B27E1B3211F0D5E000165C54 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E1B3111F0D5E000165C54 /* UIKit.framework */; };
-		B27E1B3411F0D5E000165C54 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B27E1B3311F0D5E000165C54 /* libz.dylib */; };
 		B29851E611F0D865008B1A4A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B29851E511F0D865008B1A4A /* Security.framework */; };
 		B2CBDA5D1348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h in Headers */ = {isa = PBXBuildFile; fileRef = B2CBDA051348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.h */; };
 		B2CBDA5E1348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m in Sources */ = {isa = PBXBuildFile; fileRef = B2CBDA061348D520009DDE4D /* SCAVENGERASIAuthenticationDialog.m */; };
@@ -96,6 +96,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5B84B8F81B40399800ACF2A1 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5B84B8FA1B403BD300ACF2A1 /* libz.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.dylib; path = ../../../../../../../usr/lib/libz.1.dylib; sourceTree = "<group>"; };
 		B202D4621348D35A00C389A8 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		B202D4631348D35A00C389A8 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		B24ED8C4138C790F00FACB48 /* SSTwitterXAuthViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSTwitterXAuthViewController.h; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B84B8FC1B403BE600ACF2A1 /* libz.1.dylib in Frameworks */,
 				B27E1B2611F0D5E000165C54 /* CFNetwork.framework in Frameworks */,
 				B27E1B2811F0D5E000165C54 /* CoreGraphics.framework in Frameworks */,
 				B27E1B2A11F0D5E000165C54 /* Foundation.framework in Frameworks */,
@@ -174,7 +177,6 @@
 				B27E1B2E11F0D5E000165C54 /* QuartzCore.framework in Frameworks */,
 				B27E1B3011F0D5E000165C54 /* SystemConfiguration.framework in Frameworks */,
 				B27E1B3211F0D5E000165C54 /* UIKit.framework in Frameworks */,
-				B27E1B3411F0D5E000165C54 /* libz.dylib in Frameworks */,
 				B29851E611F0D865008B1A4A /* Security.framework in Frameworks */,
 				B2E03656121DC85D00D02434 /* libSSToolkit.a in Frameworks */,
 			);
@@ -206,6 +208,8 @@
 		0867D69AFE84028FC02AAC07 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5B84B8FA1B403BD300ACF2A1 /* libz.1.dylib */,
+				5B84B8F81B40399800ACF2A1 /* libz.tbd */,
 				B27E1B2511F0D5E000165C54 /* CFNetwork.framework */,
 				B27E1B2711F0D5E000165C54 /* CoreGraphics.framework */,
 				B27E1B2911F0D5E000165C54 /* Foundation.framework */,
@@ -549,6 +553,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				COPY_PHASE_STRIP = NO;
 				DSTROOT = /tmp/SSOAuthKit.dst;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -579,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD)";
 				DSTROOT = /tmp/SSOAuthKit.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -605,7 +611,6 @@
 		1DEB922308733DC00010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -619,7 +624,6 @@
 		1DEB922408733DC00010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
