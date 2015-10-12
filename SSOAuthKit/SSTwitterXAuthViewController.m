@@ -53,7 +53,7 @@
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
 	
-	UIBarButtonItem *signInButton = [[UIBarButtonItem alloc] initWithTitle:@"Sign In" style:UIBarButtonItemStyleDone target:self action:@selector(signIn:)];
+	UIBarButtonItem *signInButton = [[UIBarButtonItem alloc] initWithTitle:NSLocalizedString(@"Sign In",nil) style:UIBarButtonItemStyleDone target:self action:@selector(signIn:)];
 	signInButton.enabled = NO;
 	self.navigationItem.rightBarButtonItem = signInButton;
 	[signInButton release];
